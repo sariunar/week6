@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 100%;
+            height: 600px;
+            display: grid;
+            grid-template-areas: "header header"
+                                "content ads"
+                                "footer footer";
+            grid-template-columns: 70% 1fr;
+            grid-template-rows: 80px 1fr 100px;
+            text-align: center;
+        }
+        .container .header,
+        .container .ads{
+            padding-top: 30px;
+        }
+        .header{
+            background-color: lightslategray;
+            grid-area: header;
+        }
+        .content{
+            background-color: wheat;
+            grid-area: content;
+            display: grid;
+            grid-template-areas: "content0 content0"
+            "content1 content2"
+            "content3 content3";
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 40% 1fr 1fr;
+            gap: 1rem;
+            padding: 20px;
+        }
+        .content div{
+            padding-top: 30px;
+        }
+        .content0{
+            background-color: wheat;
+            grid-area: content0;
+        }
+        .content1{
+            background-color: sandybrown;
+            grid-area: content1;
+        }
+        .content2{
+            background-color: sandybrown;
+            grid-area: content2;
+        }
+        .content3{
+            background-color: sandybrown;
+            grid-area: content3;
+        }
+        .ads{
+            background-color: yellowgreen;
+            grid-area: ads;
+        }
+        .footer{
+            background-color: slategray;
+            grid-area: footer;
+            padding: 10px;
+            display: grid;
+            grid-template-areas: "footer1 footer2 footer3 footer4";
+            gap: 2rem;
+        }
+        .footer div{
+            padding-top: 30px;
+        }
+        .footer1{
+            background-color: aliceblue;
+            grid-area: footer1;
+        }
+        .footer2{
+            background-color: aliceblue;
+            grid-area: footer2;
+        }
+        .footer3{
+            background-color: aliceblue;
+            grid-area: footer3;
+        }
+        .footer4{
+            background-color: aliceblue;
+            grid-area: footer4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">[Шапка страницы]</header>
+        <div class="content">
+            <div class="content0">[Основная часть]</div>
+            <div class="content1">[Еще 1]</div>
+            <div class="content2">[Еще 2]</div>
+            <div class="content3">[Еще 3]</div>
+        </div>
+        <aside class="ads">[Боковая область]</aside>
+        <footer class="footer">
+            <div class="footer1">[Секция футера 1]</div>
+            <div class="footer2">[Секция футера 2]</div>
+            <div class="footer3">[Секция футера 3]</div>
+            <div class="footer4">[Секция футера 4]</div>
+        </footer>
+    </div>
+</body>
+</html>
